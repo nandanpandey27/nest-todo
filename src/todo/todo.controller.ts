@@ -1,6 +1,14 @@
-import { Get, Post, Put, Param, Body, Controller, Delete } from '@nestjs/common';
-import { TodoService } from './../services/todo.service';
-import { Todo } from './../interfaces/todo.interface';
+import {
+  Controller,
+  Get,
+  Post,
+  Put,
+  Delete,
+  Body,
+  Param,
+} from '@nestjs/common';
+import { Todo } from './interfaces/todo.interface';
+import { TodoService } from './todo.service';
 
 @Controller('todos')
 export class TodoController {

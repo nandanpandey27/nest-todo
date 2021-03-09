@@ -1,4 +1,4 @@
-export class Todo {
+export class UpdateTodo {
   id?: number;
   title?: string;
 }
