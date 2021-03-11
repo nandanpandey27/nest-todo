@@ -15,14 +15,12 @@ export class TodoService {
     return this.todos;
   }
 
-  find(id: string): Todo {
-    return this.todos.find((todo) => todo.id === parseInt(id));
+  find(id: number): Todo {
+    return this.todos.find((todo) => todo.id === id);
   }
 
-  update(id: string, todo: UpdateTodo): Todo {
-    const index: number = this.todos.findIndex(
-      (todo: Todo) => todo.id === parseInt(id),
-    );
+  update(id: number, todo: UpdateTodo): Todo {
+    const index: number = this.todos.findIndex((todo: Todo) => todo.id === id);
 
     if (index > -1) {
       const td: Todo = { ...this.todos[index], ...todo };
@@ -32,10 +30,8 @@ export class TodoService {
     return null;
   }
 
-  delete(id: string): Todo {
-    const index: number = this.todos.findIndex(
-      (todo: Todo) => todo.id === parseInt(id),
-    );
+  delete(id: number): Todo {
+    const index: number = this.todos.findIndex((todo: Todo) => todo.id === id);
 
     if (index > -1) {
       const todo = this.todos[index];
